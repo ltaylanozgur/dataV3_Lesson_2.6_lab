@@ -3,7 +3,7 @@
 -- see that there is Christian Arkoyd, Kirsten Arkoyd, and Debbie Arkoyd. These three actors 
 -- have the same last name. So we do not want to include this last name in our output. 
 -- Last name "Astaire" is present only one time with actor "Angelina Astaire", 
--- hence we would want this in our output list.
+-- hence we would want this in our output list..
 SELECT last_name, COUNT(last_name) AS number_of_times_repeated
 FROM actor
 GROUP BY last_name
