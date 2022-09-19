@@ -59,5 +59,9 @@ HAVING AVG(length) > 120;
 SELECT title, length, rating
 FROM sakila.film
 WHERE length != 0 AND length IS NOT NULL
-ORDER BY length DESC;
+ORDER BY length DESC; -- my previous answer
+
+SELECT RANK () OVER (ORDER BY length DESC), title, length, rating
+FROM sakila.film
+WHERE length != 0 AND length IS NOT NULL; -- my previous answer plus rank column
 
